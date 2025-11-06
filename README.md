@@ -19,7 +19,7 @@ A beautiful, animated water intake tracker to help you stay hydrated throughout 
 
 ## 🚀 Live Demo
 
-Visit the live app: [https://YOUR-USERNAME.github.io/water-tracker/](https://YOUR-USERNAME.github.io/water-tracker/)
+Visit the live app: [https://SmritiUofA.github.io/water-tracker/](https://SmritiUofA.github.io/water-tracker/)
 
 ## 📁 Project Structure
 
