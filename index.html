@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Track your daily water intake with beautiful animations and timely reminders">
+    <meta name="author" content="Your Name">
+    <title>Water Tracker 💧</title>
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>💧 Water Tracker</h1>
+        </header>
+        
+        <!-- Jug Visualization -->
+        <section class="jug-section">
+            <div class="jug-container">
+                <div class="water" id="waterLevel"></div>
+            </div>
+        </section>
+
+        <!-- Statistics Display -->
+        <section class="stats">
+            <p>Today: <span id="current">0</span> ml / <span class="goal" id="goal">2000</span> ml</p>
+            <p><span id="percentage">0</span>% of daily goal</p>
+        </section>
+
+        <!-- Achievement Banner -->
+        <div class="achievement" id="achievement">
+            🎉 Goal Achieved! Great job staying hydrated!
+        </div>
+
+        <!-- Action Buttons -->
+        <section class="buttons">
+            <button class="add-btn" onclick="addWater(250)" aria-label="Add 250ml of water">
+                + 250ml
+            </button>
+            <button class="add-btn" onclick="addWater(500)" aria-label="Add 500ml of water">
+                + 500ml
+            </button>
+            <button class="add-btn" onclick="addWater(750)" aria-label="Add 750ml of water">
+                + 750ml
+            </button>
+            <button class="reset-btn" onclick="resetDay()" aria-label="Reset today's water intake">
+                Reset Day
+            </button>
+        </section>
+
+        <!-- Settings Panel -->
+        <section class="settings">
+            <h3>⚙️ Settings</h3>
+            
+            <div class="setting-group">
+                <label for="dailyGoal">Daily Goal (ml):</label>
+                <input 
+                    type="number" 
+                    id="dailyGoal" 
+                    value="2000" 
+                    min="500" 
+                    max="5000" 
+                    step="100"
+                    aria-label="Set your daily water goal in milliliters">
+            </div>
+
+            <div class="setting-group">
+                <label for="reminderInterval">Reminder Every:</label>
+                <select id="reminderInterval" aria-label="Set reminder interval">
+                    <option value="30">30 minutes</option>
+                    <option value="60" selected>1 hour</option>
+                    <option value="90">1.5 hours</option>
+                    <option value="120">2 hours</option>
+                </select>
+            </div>
+
+            <div class="setting-group">
+                <button 
+                    class="add-btn notification-btn" 
+                    onclick="enableNotifications()"
+                    aria-label="Enable water reminder notifications">
+                    Enable Notifications
+                </button>
+                <div id="notificationStatus" class="notification-status notification-disabled">
+                    Notifications: Disabled
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
